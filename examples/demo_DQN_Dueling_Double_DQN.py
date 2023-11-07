@@ -17,7 +17,7 @@ def train_dqn_for_cartpole():
     env_args = {'env_name': 'CartPole-v1',
                 'max_step': 500,
                 'state_dim': 4,
-                'action_dim': 2,
+                'action_dim': 1,
                 'if_discrete': True, }
     get_gym_env_args(env=gym.make('CartPole-v1'), if_print=True)  # return env_args
 
@@ -239,7 +239,7 @@ if __name__ == '__main__':
     Parser = ArgumentParser(description='ArgumentParser for ElegantRL')
     Parser.add_argument('--gpu', type=int, default=0, help='GPU device ID for training')
     Parser.add_argument('--drl', type=int, default=0, help='RL algorithms ID for training')
-    Parser.add_argument('--env', type=str, default='1', help='the environment ID for training')
+    Parser.add_argument('--env', type=str, default='0', help='the environment ID for training')
 
     Args = Parser.parse_args()
     GPU_ID = Args.gpu

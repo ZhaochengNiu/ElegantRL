@@ -1,8 +1,8 @@
 import sys
 import gym
 
-from elegantrl.train.run import train_and_evaluate, train_and_evaluate_mp
-from elegantrl.train.config import Arguments
+from ..elegantrl.train.run import train_and_evaluate, train_and_evaluate_mp
+from ..elegantrl.train.config import Arguments
 from elegantrl.agents.AgentDDPG import AgentDDPG, AgentDDPGHterm
 
 def demo_ddpg_h_term(gpu_id, drl_id, env_id):  

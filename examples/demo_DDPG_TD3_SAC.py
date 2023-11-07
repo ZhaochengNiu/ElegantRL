@@ -217,7 +217,7 @@ if __name__ == '__main__':
     Parser = ArgumentParser(description='ArgumentParser for ElegantRL')
     Parser.add_argument('--gpu', type=int, default=0, help='GPU device ID for training')
     Parser.add_argument('--drl', type=int, default=0, help='RL algorithms ID for training')
-    Parser.add_argument('--env', type=str, default='0', help='the environment ID for training')
+    Parser.add_argument('--env', type=str, default='2', help='the environment ID for training')
 
     Args = Parser.parse_args()
     GPU_ID = Args.gpu

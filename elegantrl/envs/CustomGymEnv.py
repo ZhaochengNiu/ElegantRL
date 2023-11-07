@@ -46,6 +46,7 @@ class PendulumEnv:  # a demo of custom gym env
     def render(self):
         self.env.render()
 
+
 class GymNormaEnv(gym.Wrapper):
     def __init__(self, env_name: str = 'Hopper-v3'):
         gym.logger.set_level(40)  # Block warning
