@@ -69,8 +69,11 @@ class Actor(nn.Module):
 
     def get_action(self, state: Tensor) -> Tensor:  # for exploration
         action_avg = self.net(state).tanh()
+        print('action_avg', action_avg)
         dist = Normal(action_avg, self.explore_noise_std)
+        print('dist', dist)
         action = dist.sample()
+        print('action', action)
         return action.clip(-1.0, 1.0)
 
 
